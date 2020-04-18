@@ -7,6 +7,7 @@ export default function Content(){
         <div className="content-wrapper">
             <div className="content-top">
                 <FloatingCards />
+
             </div>
             <div className="content-mid">
 

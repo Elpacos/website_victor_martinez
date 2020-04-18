@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion} from "framer-motion";
+import { Frame } from 'framer';
 import { shuffle } from "lodash";
 import './FloatingCards.scss';
 
@@ -16,17 +17,17 @@ export const FloatingCards = () => {
     const [first, setFirst] = useState(true)
 
 
-    useEffect(() => {console.log(first)
-        if (first == true){
+    useEffect(() => {
+        if (first == true) {
             setTimeout(() => setColors(shuffle(colors)), 200);
             setFirst(false)
 
         }
-        if (first == false){
+        if (first == false) {
 
 
-        console.log("secondary")
-        setTimeout(() => setColors(shuffle(colors)), 4000);
+            console.log("secondary")
+            setTimeout(() => setColors(shuffle(colors)), 5000);
         }
     }, [colors]);
 
@@ -35,20 +36,34 @@ export const FloatingCards = () => {
     return (
         <div className="floatcards-wrapper">
             <ul>
-                {colors.map(background =>(
+                {colors.map(background => (
                     <motion.div
-                    key={background}
-                    layoutTransition={spring}
+                        key={background}
+                        layoutTransition={spring}
 
-                >
-                <div className={"images image" + (background) }/>
-                </motion.div>
+                    >
+                        <div className={"images image" + (background)} />
+                    </motion.div>
                 ))}
 
-
-
-
             </ul>
+            <div className="float-cards-text">
+                <Frame
+                    size={"100%"}
+                    background={""}
+                    style={{
+                        fontFamily: "Montserrat, Work Sans, sans-serif",
+                        fontWeight: "bold",
+                        letterSpacing: "-0.04em",
+                        fontSize: 26,
+                        color: "#FFF",
+                    }}
+                    initial={{ y: 26 * 1.2 }}
+                    animate={{ y: 0 }}
+                >
+                    polla
+                </Frame>
+            </div>
         </div>
     )
 };
