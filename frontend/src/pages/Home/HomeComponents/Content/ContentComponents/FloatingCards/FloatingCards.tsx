@@ -7,27 +7,29 @@ import './FloatingCards.scss';
 
 const spring = {
     type: "spring",
-    damping: 7,
+    damping: 30,
     stiffness: 16
 };
 const initialColors = ["1", "2", "3", "4"];
 
 export const FloatingCards = () => {
     const [colors, setColors] = useState(initialColors);
-    const [first, setFirst] = useState(true)
-
+    const [first, setFirst] = useState(true);
+    const [scrolled, setScrolled] = useState(false);
+    window.onscroll= () =>{
+        if((window.pageYOffset<200)&&scrolled){
+            setScrolled(false);
+            setTimeout(() => setColors(shuffle(colors)), 200)
+        }
+    }
 
     useEffect(() => {
         if (first == true) {
             setTimeout(() => setColors(shuffle(colors)), 200);
             setFirst(false)
-
         }
-        if (first == false) {
-
-
-            console.log("secondary")
-            setTimeout(() => setColors(shuffle(colors)), 5000);
+        if ((first == false )&&(window.pageYOffset<200)) {
+            setTimeout(() => {if(window.pageYOffset<200){setColors(shuffle(colors))}else{setScrolled(true)}}, 4000);
         }
     }, [colors]);
 
@@ -61,7 +63,7 @@ export const FloatingCards = () => {
                     initial={{ y: 26 * 1.2 }}
                     animate={{ y: 0 }}
                 >
-                    polla
+                    Developer
                 </Frame>
             </div>
         </div>

@@ -1,0 +1,45 @@
+@import '../../../../Utilities/_variables';
+
+.topbar-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0);
+
+    width: 100%;
+    margin-left: -95%;
+    transition: background-color 0.6s, margin-left 1.4s !important;
+    .topbar-icon{
+        font-family: "Montserrat";
+        font-size: 35px;
+        color: white;
+        font-weight: 700;
+        transition: color 0.1s;
+
+    }
+}
+.topbar-wrapper-activated{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    background-color: $light;
+    width: 100%;
+    transition: background-color 0.4s, margin-left 1.5s !important;
+    margin-left: 0;
+    .topbar-icon{
+    padding-right: 15px;
+    font-family: "Montserrat";
+    font-size: 35px;
+    color: black;
+    transition: color 2.5s;
+    font-weight: 700;
+
+}
+}
+
