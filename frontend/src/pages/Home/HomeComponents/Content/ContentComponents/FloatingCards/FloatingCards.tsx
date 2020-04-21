@@ -16,20 +16,34 @@ export const FloatingCards = () => {
     const [colors, setColors] = useState(initialColors);
     const [first, setFirst] = useState(true);
     const [scrolled, setScrolled] = useState(false);
+    const [dark, setDark] = useState(true);
     window.onscroll= () =>{
-        if((window.pageYOffset<200)&&scrolled){
+        if((window.pageYOffset<100)&&scrolled){
+
             setScrolled(false);
             setTimeout(() => setColors(shuffle(colors)), 200)
+        }
+        if((window.pageYOffset<100)&&dark){
+            setDark(false)
+        }
+        if(window.pageYOffset>=100){
+            setDark(true);
         }
     }
 
     useEffect(() => {
+        console.log(scrolled)
+
         if (first == true) {
-            setTimeout(() => setColors(shuffle(colors)), 200);
+            setDark(false)
+            setTimeout(() => setColors(shuffle(colors)), 500);
             setFirst(false)
+
         }
-        if ((first == false )&&(window.pageYOffset<200)) {
-            setTimeout(() => {if(window.pageYOffset<200){setColors(shuffle(colors))}else{setScrolled(true)}}, 4000);
+
+        if ((first == false )&&(window.pageYOffset<100)) {
+
+            setTimeout(() => {if(window.pageYOffset<100){setColors(shuffle(colors))}else{setScrolled(true)}}, 4000);
         }
     }, [colors]);
 
@@ -44,12 +58,14 @@ export const FloatingCards = () => {
                         layoutTransition={spring}
 
                     >
-                        <div className={"images image" + (background)} />
+                        <div className={"images image" + (background)} >
+
+                        </div>
                     </motion.div>
                 ))}
 
             </ul>
-            <div className="float-cards-text">
+            <div className={"float-cards-text" + (dark? "-active": "")}>
                 <Frame
                     size={"100%"}
                     background={""}
@@ -58,7 +74,7 @@ export const FloatingCards = () => {
                         fontWeight: "bold",
                         letterSpacing: "-0.04em",
                         fontSize: 26,
-                        color: "#FFF",
+                        color: "#EEF8FF",
                     }}
                     initial={{ y: 26 * 1.2 }}
                     animate={{ y: 0 }}

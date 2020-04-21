@@ -1,3 +1,5 @@
+@import '../../../../Utilities/_variables.scss';
+
 .content-wrapper{
     position: relative;
     min-height: 100vh;
@@ -5,5 +7,68 @@
 .content-top{
 
 
+}
+.content-mid{
 
+    .content-span{
+        height: 70vh;
+    }
+    .content-mid-top{
+        display: grid;
+        grid-template-columns: 2.5fr 2.5fr;
+
+        background-color: $light;
+    }
+    .content-mid-mid{
+        background-color: $dark;
+    }
+    .content-span-gallery{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
+
+    }
+    .content-span-photo{
+        height: 50%;
+        width: 60%;
+        background-color: $green;
+    }
+    .content-span-text{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .content-divider-vertical{
+            height: 50%;
+            width: 10px;
+            background-color: $blue;
+            z-index: 20;
+
+        }
+    .content-text{
+        height: 32%;
+        width: 50%;
+        justify-content: center;
+        .content-divider-text{
+            font-family: 'Montserrat';
+            font-weight: 700;
+            color: $dark;
+            font-size: 30px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 10%;
+        }
+    }
+    .content-divider-horizontal{
+        margin-left: -57px;
+        height: 5px;
+        width: 90%;
+        background-color: $green;
+
+    }
 }
