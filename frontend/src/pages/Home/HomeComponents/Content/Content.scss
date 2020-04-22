@@ -12,11 +12,11 @@
 .content-mid{
 
     .content-span{
-        height: 45vh;
+        height: 55vh;
     }
     .content-mid-top{
         display: grid;
-        grid-template-columns: 2.5fr 2.5fr;
+        grid-template-columns: 3fr 2.5fr;
         background-image: url("../../../../media/whiteb.png");
         background-attachment: fixed;
         background-size: cover;
@@ -25,6 +25,8 @@
     .content-mid-mid{
         background-color: $light;
         height: 80vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
     .content-span-gallery{
         display: flex;
@@ -35,9 +37,15 @@
 
     }
     .content-span-photo{
-        height: 50%;
-        width: 60%;
-        background-color: $green;
+        border-radius: 0.2em;
+        height: 60%;
+        width: 40%;
+        background-image: url('../../../../media/Profile.jpg');
+        background-size: cover;
+        background-position: center;
+        box-shadow: -11px 10px 1.5px 0px rgba(77, 76, 76, 0.541);
+
+
     }
     .content-span-text{
         height: 100%;
@@ -58,7 +66,7 @@
         }
     .content-text{
         transform: skewX(0deg);
-        height: 70%;
+        height: 80%;
         width: 50%;
         justify-content: center;
         .content-divider-text{
@@ -73,9 +81,9 @@
         }
     }
     .content-divider-horizontal{
-        margin-left: -40%;
+        margin-left: 55%;
         height: 1px;
-        width: 370%;
+        width: 200%;
         background-color: $red;
 
     }
