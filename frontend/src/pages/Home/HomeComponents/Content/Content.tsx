@@ -7,16 +7,13 @@ import { motion, useAnimation } from 'framer-motion';
 export default function Content() {
     const controls = useAnimation();
     const itemsvertical = {
-            visible: { opacity: 1, y:0 },
-            hidden: { opacity: 0, y:-200 },
+            visible: { opacity: 0.8, y:0 },
+            hidden: { opacity: 0, y:-250 },
     }
-    const itemshorizontal = {
-        visible: { opacity: 1, x:0 },
-        hidden: { opacity: 0, x:200 },
-    }
+
     window.addEventListener("scroll", () => {
 
-        if (window.pageYOffset > 650) {
+        if (window.pageYOffset > 500) {
         controls.start("visible");
         }
     });
@@ -33,15 +30,16 @@ export default function Content() {
                         initial="hidden"
                         animate={controls}
                         variants={itemsvertical}
-                        transition={{ease: "easeOut", duration: 0.7}}
+                        transition={{ease: "easeOut"}}
                         className="content-divider-vertical" />
                         <div className="content-text">
-                            <div className="content-divider-text">Fullstack Css</div>
-                            <motion.div
-                            initial="hidden"
-                            animate={controls}
-                            variants={itemshorizontal}
-                            transition={{ease: "easeOut"}}
+                            <div className="content-divider-text">
+                                Un tio sencillo fullstack css, <br/>
+                                atrevido, racional terapeutico <br/>
+
+                            </div>
+                            <div
+
                             className="content-divider-horizontal" />
                         </div>
 

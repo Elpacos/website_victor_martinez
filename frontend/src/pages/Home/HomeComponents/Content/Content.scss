@@ -1,6 +1,7 @@
 @import '../../../../Utilities/_variables.scss';
 
 .content-wrapper{
+    border-top: 2px $light;
     position: relative;
     min-height: 100vh;
 }
@@ -11,16 +12,19 @@
 .content-mid{
 
     .content-span{
-        height: 70vh;
+        height: 45vh;
     }
     .content-mid-top{
         display: grid;
         grid-template-columns: 2.5fr 2.5fr;
-
-        background-color: $light;
+        background-image: url("../../../../media/whiteb.png");
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: baseline;
     }
     .content-mid-mid{
-        background-color: $dark;
+        background-color: $light;
+        height: 80vh;
     }
     .content-span-gallery{
         display: flex;
@@ -41,22 +45,26 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transform: skewX(0deg);
     }
     .content-divider-vertical{
             height: 50%;
             width: 10px;
-            background-color: $blue;
+            background-color: $red;
             z-index: 20;
+
+
 
         }
     .content-text{
-        height: 32%;
+        transform: skewX(0deg);
+        height: 70%;
         width: 50%;
         justify-content: center;
         .content-divider-text{
             font-family: 'Montserrat';
             font-weight: 700;
-            color: $dark;
+            color: $light;
             font-size: 30px;
             height: 100%;
             display: flex;
@@ -65,10 +73,10 @@
         }
     }
     .content-divider-horizontal{
-        margin-left: -57px;
-        height: 5px;
-        width: 90%;
-        background-color: $green;
+        margin-left: -40%;
+        height: 1px;
+        width: 370%;
+        background-color: $red;
 
     }
 }
