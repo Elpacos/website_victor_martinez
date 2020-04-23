@@ -1,3 +1,196 @@
 .home-wrapper{
 min-height: 100vh;
 }
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+
+
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+
+
+    display: table;
+    width: 100%;
+
+    background-color: #0D0C1D;
+    color: #000;
+    line-height: 1.6;
+    position: relative;
+    font-family: sans-serif;
+
+  }
+
+  .lines {
+    overflow-x: hidden;
+
+
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+  }
+  .lines .line {
+    position: absolute;
+    width: 1px;
+    height: 15 0%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  .lines .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    -webkit-animation: run 7s 0s infinite;
+            animation: run 7s 0s infinite;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+            animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+  .lines .line:nth-child(1) {
+      transform: skew(-3deg);
+    margin-left: -45%;
+  }
+  .lines .line:nth-child(1)::after {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  .lines .line:nth-child(3) {
+    transform: skew(25deg);
+    margin-left: -20%;
+  }
+  .lines .line:nth-child(3)::after {
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+  }
+  .lines .line:nth-child(2) {
+    transform: skew(-30deg);
+    margin-left: -35%;
+  }
+  .lines .line:nth-child(2)::after {
+    -webkit-animation-delay: 2.1s;
+            animation-delay: 2.1s;
+  }
+  .lines .line:nth-child(4) {
+    transform: skew(30deg);
+    margin-left: 20%;
+  }
+  .lines .line:nth-child(4)::after {
+    -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s;
+  }
+  .lines .line:nth-child(12) {
+    transform: skew(30deg);
+    margin-left: 20%;
+  }
+  .lines .line:nth-child(12)::after {
+    -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s;
+  }
+  .lines .line:nth-child(5) {
+    transform: skew(10deg);
+    margin-left: 30%;
+  }
+  .lines .line:nth-child(5)::after {
+    -webkit-animation-delay: 1.7s;
+            animation-delay: 1.7s;
+  }
+  .lines .line:nth-child(6) {
+    transform: skew(-3deg);
+    margin-left: 45%;
+  }
+  .lines .line:nth-child(6)::after {
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+  }
+  .lines .line:nth-child(7) {
+    transform: skew(70deg);
+    margin-left: 70%;
+  }
+  .lines .line:nth-child(7)::after {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+  .lines .line:nth-child(9) {
+    transform: skew(70deg);
+    margin-left: 70%;
+  }
+  .lines .line:nth-child(9)::after {
+    -webkit-animation-delay: 1.3s;
+            animation-delay: 1.3s;
+  }
+  .lines .line:nth-child(10) {
+    transform: skew(-14deg);
+    margin-left: 20%;
+  }
+  .lines .line:nth-child(10)::after {
+    -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s;
+  }
+  .lines .line:nth-child(11) {
+    transform: skew(-14deg);
+    margin-left: 20%;
+  }
+  .lines .line:nth-child(11)::after {
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+  }
+  .lines .line:nth-child(8) {
+    transform: skew(-7deg);
+    margin-left: 0%;
+  }
+  .lines .line:nth-child(8)::after {
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+  }
+
+  @-webkit-keyframes run {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+
+  @keyframes run {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+// @media (max-width: 600px)
+//   .wrapper
+//     padding: 0 10%

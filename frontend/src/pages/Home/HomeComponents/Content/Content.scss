@@ -4,29 +4,40 @@
     border-top: 2px $light;
     position: relative;
     min-height: 100vh;
+
 }
 .content-top{
-
+height: 100vh;
 
 }
 .content-mid{
 
     .content-span{
-        height: 55vh;
+        height: 45vh;
     }
     .content-mid-top{
+
+
+
+    }
+    .content-span-background{
+        height: 100%;
         display: grid;
         grid-template-columns: 3fr 2.5fr;
-        background-image: url("../../../../media/whiteb.png");
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: baseline;
+
     }
     .content-mid-mid{
-        background-color: $light;
+        padding: 0 10%;
+        width: 100%;
         height: 80vh;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+
+    }
+    .content-divider-split{
+        display: flex;
+        align-self: center;
+        width: 3px;
+        height: 70%;
+        background-color: $green;
     }
     .content-span-gallery{
         display: flex;
@@ -47,13 +58,16 @@
 
 
     }
+    .float-cards-text{
+        width: 80%;
+    }
     .content-span-text{
         height: 100%;
-        width: 100%;
+        width: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
-        transform: skewX(0deg);
+
     }
     .content-divider-vertical{
             height: 50%;
@@ -82,7 +96,7 @@
     }
     .content-divider-horizontal{
         margin-left: 55%;
-        height: 1px;
+        height: 3px;
         width: 200%;
         background-color: $red;
 

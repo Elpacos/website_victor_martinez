@@ -18,32 +18,27 @@ export const FloatingCards = () => {
     const [scrolled, setScrolled] = useState(false);
     const [dark, setDark] = useState(true);
     window.onscroll= () =>{
-        if((window.pageYOffset<100)&&scrolled){
 
-            setScrolled(false);
+        if(((window.pageYOffset<1900) && (window.pageYOffset>1000))&& (!scrolled)){
+
+            setScrolled(true);
             setTimeout(() => setColors(shuffle(colors)), 200)
         }
-        if((window.pageYOffset<100)&&dark){
-            setDark(false)
-        }
-        if(window.pageYOffset>=100){
-            setDark(true);
-        }
+
     }
 
     useEffect(() => {
-        console.log(scrolled)
+
 
         if (first == true) {
             setDark(false)
-            setTimeout(() => setColors(shuffle(colors)), 500);
             setFirst(false)
 
         }
 
-        if ((first == false )&&(window.pageYOffset<100)) {
+        if ((first == false )&&((window.pageYOffset<1900) && (window.pageYOffset>1000))) {
 
-            setTimeout(() => {if(window.pageYOffset<100){setColors(shuffle(colors))}else{setScrolled(true)}}, 5000);
+            setTimeout(() => {if(((window.pageYOffset<1900) && (window.pageYOffset>1000))){setColors(shuffle(colors))}else{setScrolled(false)}}, 5000);
         }
     }, [colors]);
 

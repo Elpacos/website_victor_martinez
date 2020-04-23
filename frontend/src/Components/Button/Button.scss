@@ -1,0 +1,25 @@
+@import '../../Utilities/variables.scss';
+.common-button-wrapper{
+    font-family: 'Montserrat';
+    background-color: $green;
+    font-weight: 800;
+    color: white;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 0.2em;
+    transition: all 100ms;
+    transition: transform 300ms;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.common-button-wrapper:hover:active{
+    transition: all 100ms;
+    background-color: rgb(40, 40, 109);
+}
+
+.common-button-wrapper:hover{
+    background-color: rgb(50, 50, 112);
+    transform: translateY(-1.5px);
+}
