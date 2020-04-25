@@ -1,0 +1,26 @@
+@import '../../../../utils/GlobalStyles/variables';
+.advantages-wrapper{
+    background-color: $grey;
+    height: 450px;
+    @media(max-width: $mobile){
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: auto;  
+    }
+    width: 100%;
+    margin: auto;
+}
+
+.advantages-list{
+    height: 450px;
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media(max-width: $mobile){
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+    align-content: center;
+    justify-items: center;
+}

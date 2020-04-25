@@ -5,7 +5,7 @@ import Content from './HomeComponents/Content/Content';
 
 export default function Home() {
     return (
-        <div className="home-wrapper">
+        <div className="home-wrapper" id="home">
             <div className="lines">
                 <div className="line"></div>
                 <div className="line"></div>
@@ -23,6 +23,7 @@ export default function Home() {
             <div className="home-topbar">
                 <Topbar />
             </div>
+
             <div className="home-content">
                 <Content />
             </div>

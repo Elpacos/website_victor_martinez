@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from "react";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import { Frame } from 'framer';
 import { shuffle } from "lodash";
 import './FloatingCards.scss';
@@ -17,12 +17,18 @@ export const FloatingCards = () => {
     const [first, setFirst] = useState(true);
     const [scrolled, setScrolled] = useState(false);
     const [dark, setDark] = useState(true);
-    window.onscroll= () =>{
+    const [arrow, setArrow] = useState(false);
+    window.onscroll = () => {
 
-        if(((window.pageYOffset<1900) && (window.pageYOffset>1000))&& (!scrolled)){
+        if (((window.pageYOffset < 1900) && (window.pageYOffset > 1000)) && (!scrolled)) {
 
             setScrolled(true);
             setTimeout(() => setColors(shuffle(colors)), 200)
+        }
+        if (window.pageYOffset < 650){
+            setTimeout(() => setArrow(true), 300);
+        }else{
+            setTimeout(() => setArrow(false), 300);
         }
 
     }
@@ -31,17 +37,21 @@ export const FloatingCards = () => {
 
 
         if (first == true) {
-            setDark(false)
-            setFirst(false)
+            setDark(false);
+            setFirst(false);
+            setTimeout(() => setArrow(true), 300);
 
         }
 
-        if ((first == false )&&((window.pageYOffset<1900) && (window.pageYOffset>1000))) {
+        if ((first == false) && ((window.pageYOffset < 1900) && (window.pageYOffset > 1000))) {
 
-            setTimeout(() => {if(((window.pageYOffset<1900) && (window.pageYOffset>1000))){setColors(shuffle(colors))}else{setScrolled(false)}}, 5000);
+            setTimeout(() => { if (((window.pageYOffset < 1900) && (window.pageYOffset > 1000))) { setColors(shuffle(colors)) } else { setScrolled(false) } }, 5000);
         }
     }, [colors]);
 
+    function navigationFun(where: string){
+        document.getElementById(where)?.scrollIntoView(true);
+    }
 
 
     return (
@@ -60,7 +70,7 @@ export const FloatingCards = () => {
                 ))}
 
             </ul>
-            <div className={"float-cards-text" + (dark? "-active": "")}>
+            <div className={"float-cards-text" + (dark ? "-active" : "")}>
                 <Frame
                     size={"100%"}
                     background={""}
@@ -76,6 +86,10 @@ export const FloatingCards = () => {
                 >
                     Developer
                 </Frame>
+                {arrow && <div className="arrows-content" onClick={()=> navigationFun("contenttop")}>
+                <div className="arrow arrow-first"></div>
+                <div className="arrow arrow-second"></div>
+                </div>}
             </div>
         </div>
     )

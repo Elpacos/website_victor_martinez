@@ -1,0 +1,31 @@
+@import '../../../../../utils/GlobalStyles/variables';
+.advantage-wrapper{
+    height: 300px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: grid;
+    grid-template-rows: 110px 50px 100px;
+}
+
+.advantage-icon{
+    .MuiSvgIcon-root{
+        height: 3.7em;
+        width: 100%;
+    }
+}
+
+.advantage-title{
+    font-weight: 900;
+    font-size: 1.6em;
+    color: $jungle;
+}
+
+.advantage-subtitle{
+    
+    color: black;
+    font-weight: 300;
+    font-size: 1.2em;
+    @media(max-width: $mobile){
+        font-size: 1em;    
+    }
+}

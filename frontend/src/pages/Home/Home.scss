@@ -1,9 +1,89 @@
+@import '../../Utilities/variables.scss';
+
 .home-wrapper{
 min-height: 100vh;
 }
 
 
+$ani-speed: 1.5s;
+$ani-delay: 1.5s;
 
+body {
+    background: $dark;
+}
+body::-webkit-scrollbar {
+  width: 18px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  outline: 1px solid slategrey;
+}
+.arrows-content{
+  width: 200px !important;
+  height: 100px !important;
+  margin-top: 63%;
+  opacity: 1;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.arrow {
+
+    opacity: 0;
+    position: absolute;
+        left: 50vw;
+        top: 97%;
+    transform-origin: 50% 50%;
+    transform: translate3d(-50%, -10%, 0);
+}
+
+.arrow-first {
+    animation: arrow-movement $ani-speed ease-in-out infinite;
+}
+.arrow-second {
+    animation: arrow-movement $ani-speed $ani-delay ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 4px;
+    position: absolute;
+        top: 0%;
+        left: 0;
+    width: 30px;
+}
+
+.arrow:before {
+    transform: rotate(35deg) translateX(-32%);
+    transform-origin: top left;
+}
+
+.arrow:after {
+    transform: rotate(-35deg) translateX(32%);
+    transform-origin: top right;
+}
+
+// Animation
+@keyframes arrow-movement {
+    0% {
+        opacity: 0;
+        top: 93%;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
 * {
     margin: 0;
@@ -38,14 +118,14 @@ min-height: 100vh;
     top: 0;
     left: 0;
     right: 0;
-    height: 100%;
+    height: 200%;
     margin: auto;
-    width: 90vw;
+    width: 100vw;
   }
   .lines .line {
     position: absolute;
     width: 1px;
-    height: 15 0%;
+    height: 150%;
     top: 0;
     left: 50%;
     background: rgba(255, 255, 255, 0.1);

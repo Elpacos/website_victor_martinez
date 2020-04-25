@@ -24,7 +24,7 @@ export default function Content() {
 
             </div>
             <div className="content-mid">
-                <div className="content-span content-mid-top">
+                <div className="content-span content-mid-top" id="contenttop">
                     <div className="content-span-background">
                         <div className="content-span-text">
 
