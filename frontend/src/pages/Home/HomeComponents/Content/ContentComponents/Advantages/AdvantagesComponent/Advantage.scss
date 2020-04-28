@@ -1,4 +1,4 @@
-@import '../../../../../utils/GlobalStyles/variables';
+@import '../../../../../../../Utilities/_variables.scss';
 .advantage-wrapper{
     height: 300px;
     padding-right: 20px;
@@ -15,17 +15,18 @@
 }
 
 .advantage-title{
-    font-weight: 900;
-    font-size: 1.6em;
-    color: $jungle;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 1.8em;
+    color: $light;
 }
 
 .advantage-subtitle{
-    
+    font-family: 'Montserrat';
     color: black;
     font-weight: 300;
     font-size: 1.2em;
-    @media(max-width: $mobile){
-        font-size: 1em;    
+    @media(max-width: 768px){
+        font-size: 1em;
     }
 }

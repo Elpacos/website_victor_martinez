@@ -4,15 +4,21 @@ import { motion } from "framer-motion";
 import { Frame } from 'framer';
 import { shuffle } from "lodash";
 import './FloatingCards.scss';
+import Button from '../../../../../../Components/Button/Button';
+
 
 const spring = {
     type: "spring",
     damping: 30,
     stiffness: 16
 };
-const initialColors = ["1", "2", "3", "4"];
-
+const links = ["https://wirend.net", "/prod", "GitHub", "Link"];
+const buttons = ["Wirend site", "Production", "GitHub", "Link"];
+const initialColors = [0, 1, 2, 3];
+const titles = ["Wirend", "Big socks: prod", "Crypto predictor", "Facial recognition model"]
+const text = ["Entrepreneur project, platform to conect businesses with influencers, based on trained algorithms, displaying a user-friendly interface.", "My Production and music works, including beats and collabs.", "Crypto price RNN predictor", "Facial recognition model"]
 export const FloatingCards = () => {
+
     const [colors, setColors] = useState(initialColors);
     const [first, setFirst] = useState(true);
     const [scrolled, setScrolled] = useState(false);
@@ -25,9 +31,9 @@ export const FloatingCards = () => {
             setScrolled(true);
             setTimeout(() => setColors(shuffle(colors)), 200)
         }
-        if (window.pageYOffset < 650){
+        if (window.pageYOffset < 650) {
             setTimeout(() => setArrow(true), 300);
-        }else{
+        } else {
             setTimeout(() => setArrow(false), 300);
         }
 
@@ -45,31 +51,42 @@ export const FloatingCards = () => {
 
         if ((first == false) && ((window.pageYOffset < 1900) && (window.pageYOffset > 1000))) {
 
-            setTimeout(() => { if (((window.pageYOffset < 1900) && (window.pageYOffset > 1000))) { setColors(shuffle(colors)) } else { setScrolled(false) } }, 5000);
+            setTimeout(() => { if (((window.pageYOffset < 1900) && (window.pageYOffset > 1000))) { setColors(shuffle(colors)) } else { setScrolled(false) } }, 50000);
         }
     }, [colors]);
 
-    function navigationFun(where: string){
+    function navigationFun(where: string) {
         document.getElementById(where)?.scrollIntoView(true);
     }
 
 
     return (
         <div className="floatcards-wrapper">
-            <ul>
-                {colors.map(background => (
+            <div className="cards-wrapper">
+                {colors.map((background) => (
                     <motion.div
                         key={background}
                         layoutTransition={spring}
-
+                        className="floated-card"
                     >
                         <div className={"images image" + (background)} >
-
+                            <div className="hover">
+                                <div className="hover-title">
+                                    {titles[background]}
+                                </div>
+                                <div className="hover-text">
+                                    {text[background]}
+                                </div>
+                                <a href={links[background]} target="_blank">
+                                <Button text={buttons[background]}/>
+                                </a>
+                            </div>
                         </div>
                     </motion.div>
                 ))}
+                </div>
 
-            </ul>
+
             <div className={"float-cards-text" + (dark ? "-active" : "")}>
                 <Frame
                     size={"100%"}
@@ -86,9 +103,9 @@ export const FloatingCards = () => {
                 >
                     Developer
                 </Frame>
-                {arrow && <div className="arrows-content" onClick={()=> navigationFun("contenttop")}>
-                <div className="arrow arrow-first"></div>
-                <div className="arrow arrow-second"></div>
+                {arrow && <div className="arrows-content" onClick={() => navigationFun("contenttop")}>
+                    <div className="arrow arrow-first"></div>
+                    <div className="arrow arrow-second"></div>
                 </div>}
             </div>
         </div>

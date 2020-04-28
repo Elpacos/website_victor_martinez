@@ -2,6 +2,7 @@ import React from 'react';
 import { FloatingCards } from './ContentComponents/FloatingCards/FloatingCards';
 import './Content.scss';
 import { motion, useAnimation } from 'framer-motion';
+import Advantages from './ContentComponents/Advantages/Advantages';
 
 
 export default function Content() {
@@ -36,8 +37,9 @@ export default function Content() {
                                 className="content-divider-vertical" />
                             <div className="content-text">
                                 <div className="content-divider-text">
-                                    Un tio sencillo fullstack css, <br />
-                                atrevido, racional terapeutico <br />
+                                   Lorem, ipsum dolor sit amet consectetur
+                                   adipisicing elit. Voluptates impedit ut amet
+
 
                                 </div>
                                 <div className="content-divider-horizontal" />
@@ -51,16 +53,9 @@ export default function Content() {
                     </div>
                 </div>
                 <div className="content-span content-mid-mid">
-                    <div className="content-mid-top">
-
-                    </div>
-                    <div className="content-mid-bottom">
-
-                    </div>
-
-
+                    <Advantages />
                 </div>
-                <div className=" content-span content-divider-bottom">
+                <div className=" content-span content-bottom">
                     <FloatingCards />
                 </div>
             </div>
