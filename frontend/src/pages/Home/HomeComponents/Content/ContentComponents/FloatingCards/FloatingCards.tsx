@@ -51,7 +51,7 @@ export const FloatingCards = () => {
 
         if ((first == false) && ((window.pageYOffset < 1900) && (window.pageYOffset > 1000))) {
 
-            setTimeout(() => { if (((window.pageYOffset < 1900) && (window.pageYOffset > 1000))) { setColors(shuffle(colors)) } else { setScrolled(false) } }, 50000);
+            setTimeout(() => { if (((window.pageYOffset < 1900) && (window.pageYOffset > 1000))) { setColors(shuffle(colors)) } else { setScrolled(false) } }, 10000);
         }
     }, [colors]);
 

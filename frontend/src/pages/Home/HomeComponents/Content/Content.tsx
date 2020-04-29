@@ -56,6 +56,10 @@ export default function Content() {
                     <Advantages />
                 </div>
                 <div className=" content-span content-bottom">
+                    <div className="content-bottom-title">
+                        MAIN PROJECTS
+                        <div className="stack"> STACK</div>
+                    </div>
                     <FloatingCards />
                 </div>
             </div>

@@ -116,8 +116,32 @@ height: 100vh;
         background-color: $red;
 
     }
+    .content-bottom-title{
+        color: white;
+        font-size: 30px;
+        font-weight: 700;
+        font-family: 'Montserrat';
+        text-align: right;
+        padding-right: 5%;
+
+    }
     .content-bottom{
-        height: 55vh;
-        margin: 5% 0;
+        border-left: 2px solid $light;
+        border-right: 2px solid $light;
+        height: 90vh;
+        margin: 5% 5%;
+    }
+    .content-bottom-title{
+        height: 15vh;
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        .stack{
+            padding-top: 7px;
+            padding-left: 10px;
+            display: flex;
+            font-size: 12px;
+            align-content: flex-end !important;
+        }
     }
 }
