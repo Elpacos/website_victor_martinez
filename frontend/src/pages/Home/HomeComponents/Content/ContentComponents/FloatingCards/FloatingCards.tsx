@@ -12,10 +12,10 @@ const spring = {
     damping: 30,
     stiffness: 16
 };
-const links = ["https://wirend.net", "/prod", "GitHub", "Link"];
-const buttons = ["Wirend site", "Production", "GitHub", "Link"];
-const initialColors = [0, 1, 2, 3];
-const titles = ["Wirend", "Big socks: prod", "Crypto predictor", "Facial recognition model"]
+const links = ["https://wirend.net", "GitHub", "Link"];
+const buttons = ["Wirend site", "GitHub", "Link"];
+const initialColors = [0, 1, 2];
+const titles = ["Wirend", "Facial recognition model", "Crypto predictor"]
 const text = ["Entrepreneur project, platform to conect businesses with influencers, based on trained algorithms, displaying a user-friendly interface.", "My Production and music works, including beats and collabs.", "Crypto price RNN predictor", "Facial recognition model"]
 export const FloatingCards = () => {
 
@@ -63,6 +63,22 @@ export const FloatingCards = () => {
     return (
         <div className="floatcards-wrapper">
             <div className="cards-wrapper">
+                <div className="left-card">
+                    <div className="image-prod">
+                        <div className="hover">
+                            <div className="hover-title">
+                                lol
+                            </div>
+                            <div className="hover-text">
+                                lol
+                            </div>
+                            <a target="_blank">
+                                <Button text="See more"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className="cards-wrapper-inside">
                 {colors.map((background) => (
                     <motion.div
                         key={background}
@@ -78,13 +94,14 @@ export const FloatingCards = () => {
                                     {text[background]}
                                 </div>
                                 <a href={links[background]} target="_blank">
-                                <Button text={buttons[background]}/>
+                                    <Button text={buttons[background]} />
                                 </a>
                             </div>
                         </div>
                     </motion.div>
                 ))}
-                </div>
+            </div>
+            </div>
 
 
             <div className={"float-cards-text" + (dark ? "-active" : "")}>

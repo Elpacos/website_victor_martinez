@@ -8,11 +8,78 @@
     height: 100vh;
 
     .cards-wrapper{
-        flex: 4;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
         width: 97%;
         margin: 0 auto;
     }
+    .cards-wrapper-inside{
+        flex: 1;
+        width: 97%;
+        margin: 0 auto;
+    }
+    .image-prod{
+        background-image: url("../../../../../../media/Prod.jpg.png");
+        height: 48vh;
+        border-radius: 0.3em;
+        box-shadow: 0px 0.5px 1px 1px #47497334;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        .hover{
+            transition: all 300ms;
+            height: 48vh;
+            width: 100%;
+        }
+        .hover-title, .hover-text{
+            visibility: hidden;
 
+        }
+        .common-button-wrapper{
+            visibility: hidden;
+        }
+    }
+    .image-prod:hover{
+        border-radius: 0.3em;
+        transition: all 300ms;
+
+        .hover{
+            font-family: 'Montserrat';
+            border-radius: 0.3em;
+            display: grid;
+            transition: all 300ms;
+            height: 48vh;
+            width: 100%;
+            background-color: rgba(166, 156, 172, 0.918);
+            grid-template-rows: 1fr 1fr 1fr;
+
+
+
+        }
+        .hover-title{
+            transition: font-size 300ms;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            visibility: visible;
+            margin: auto 7px;
+
+        }
+        .hover-text{margin: 4px;
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+            visibility: visible;
+            margin-top: auto;
+
+        }
+        .common-button-wrapper{
+            transition: all 300ms;
+            visibility: visible;
+            margin: auto;
+        }
+    }
     .floated-card{
 
         margin: 6px 8px;
@@ -22,6 +89,8 @@
 
         height: 16vh;
         width: 100%;
+
+
         .images{
             .hover{
                 transition: all 300ms;
@@ -94,9 +163,7 @@
         .image2{
             background-image: url("../../../../../../media/JS.png");
         }
-        .image3{
-            background-image: url("../../../../../../media/Prod.jpg.png");
-        }
+
 
     }
     .float-cards-text{
