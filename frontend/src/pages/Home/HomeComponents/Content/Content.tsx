@@ -25,36 +25,35 @@ export default function Content() {
 
             </div>
             <div className="content-mid">
-                <div className="content-span content-mid-top" id="contenttop">
+                <div className="content-span content-mid-mid" id="contenttop">
+                    <Advantages />
+                </div>
+                <div className="content-span content-mid-top">
                     <div className="content-span-background">
                         <div className="content-span-text">
-
-                            <motion.div
-                                initial="hidden"
-                                animate={controls}
-                                variants={itemsvertical}
-                                transition={{ ease: "easeOut" }}
-                                className="content-divider-vertical" />
                             <div className="content-text">
                                 <div className="content-divider-text">
-                                   Lorem, ipsum dolor sit amet consectetur
-                                   adipisicing elit. Voluptates impedit ut amet
+                                    <div className="content-divider-title">
+                                        Be involved,
+                                    </div>
+                                    <div className="content-divider-subtitle">
+                                        Sometimes it's difficult to find one phrase that represents you,
+                                        <br/>
+                                        Don't take it as easy as you could.
+                                    </div>
 
 
                                 </div>
-                                <div className="content-divider-horizontal" />
                             </div>
+                        </div>
+                        <div className="content-span-gallery">
 
-                    </div>
-                    <div className="content-span-gallery">
 
-
-                    </div>
+                        </div>
                     </div>
                 </div>
-                <div className="content-span content-mid-mid">
-                    <Advantages />
-                </div>
+
+
                 <div className=" content-span content-bottom">
                     <div className="content-bottom-title">
                         MAIN PROJECTS

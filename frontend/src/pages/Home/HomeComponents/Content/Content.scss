@@ -9,19 +9,12 @@
 .content-top{
 height: 100vh;
 
+
 }
 .content-mid{
 
     .content-span{
         height: 50vh;
-    }
-    .content-mid-top{
-
-
-
-
-
-
     }
     .content-span-background{
         height: 100%;
@@ -31,13 +24,12 @@ height: 100vh;
     }
     .content-mid-mid{
         padding: 0 4%;
-        width: 100%;
+        width: 90%;
         height: 50vh;
-        background-color: white;
+        margin: 0 auto;
         @media(max-width: 768px){
             height: 100vh;
         }
-
     }
     .content-divider-split{
         display: flex;
@@ -82,39 +74,31 @@ height: 100vh;
         justify-content: center;
 
     }
-    .content-divider-vertical{
-            height: 60%;
-            width: 10px;
-            background-color: $red;
-            z-index: 20;
 
-
-
-        }
     .content-text{
-        transform: skewX(0deg);
-        height: 80%;
-        width: 70%;
+        padding-top: 10%;
+        height: 100%;
+        width: 100%;
         justify-content: center;
+        display: flex;
+        align-items: center;
         .content-divider-text{
             font-family: 'Montserrat';
-            font-weight: 700;
-            color: $light;
-            font-size: 30px;
-            height: 100%;
-            display: flex;
+            font-weight: 200;
+            color: $dark;
+            font-size: 20px;
+            width: 60%;
+            display: grid;
+            text-align: left;
+            grid-template-rows: 1fr 2fr;
             text-shadow: 0.5px 1px 0.3px rgba(255, 255, 255, 0.415);
             align-items: center;
-            padding-left: 10%;
-            text-align: left;
-        }
-    }
-    .content-divider-horizontal{
-        margin-left: 30%;
-        height: 3px;
-        width: 200%;
-        background-color: $red;
+            .content-divider-title{
+                font-weight: 700;
+                font-size: 23px;
+            }
 
+        }
     }
     .content-bottom-title{
         color: white;
@@ -126,10 +110,9 @@ height: 100vh;
 
     }
     .content-bottom{
-        border-left: 2px solid $light;
-        border-right: 2px solid $light;
         height: 90vh;
-        margin: 5% 5%;
+        margin: 2% 3.5%;
+        background-color: white;
     }
     .content-bottom-title{
         height: 15vh;

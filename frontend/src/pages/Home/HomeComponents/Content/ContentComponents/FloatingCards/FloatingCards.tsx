@@ -112,8 +112,9 @@ export const FloatingCards = () => {
                         fontFamily: "Montserrat, Work Sans, sans-serif",
                         fontWeight: "bold",
                         letterSpacing: "-0.04em",
-                        fontSize: 26,
-                        color: "#EEF8FF",
+                        fontSize: 30,
+                        color: "#000",
+
                     }}
                     initial={{ y: 26 * 1.2 }}
                     animate={{ y: 0 }}

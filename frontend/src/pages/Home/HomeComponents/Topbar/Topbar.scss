@@ -7,15 +7,16 @@
     position: fixed;
     z-index: 200;
     top: 0;
-    background-color: rgba(255, 255, 255, 0);
-
+    background-color: white;
+    box-shadow: $shadow1;
     width: 100%;
-    margin-left: -95%;
+    margin-left: -94%;
     transition: background-color 0.6s, margin-left 1.4s !important;
     .topbar-icon{
+        padding-right: 5px;
         font-family: "Montserrat";
         font-size: 25px;
-        color: $light;
+        color: $dark;
         font-weight: 700;
         transition: color 0.1s;
 
@@ -29,11 +30,11 @@
     position: fixed;
     z-index: 200;
     top: 0;
-    background-color: $light;
+    background-color: white;
     width: 100%;
     transition: background-color 1s, margin-left 1.2s !important;
     margin-left: 0;
-    box-shadow: 0px 1px 3px 0.1px rgba(42, 42, 114, 0.418);
+    box-shadow: $shadow1;
     .topbar-icon{
     padding-right: 15px;
     font-family: "Montserrat";
