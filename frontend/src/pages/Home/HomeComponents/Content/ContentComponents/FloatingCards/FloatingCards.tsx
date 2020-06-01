@@ -31,7 +31,7 @@ export const FloatingCards = () => {
             setScrolled(true);
             setTimeout(() => setColors(shuffle(colors)), 200)
         }
-        if (window.pageYOffset < 650) {
+        if (window.pageYOffset < 550) {
             setTimeout(() => setArrow(true), 300);
         } else {
             setTimeout(() => setArrow(false), 300);
@@ -117,10 +117,11 @@ export const FloatingCards = () => {
 
                     }}
                     initial={{ y: 26 * 1.2 }}
-                    animate={{ y: 0 }}
+                    animate={{ y: -15 }}
                 >
-                    Developer
+                    Developer | Producer
                 </Frame>
+
                 {arrow && <div className="arrows-content" onClick={() => navigationFun("contenttop")}>
                     <div className="arrow arrow-first"></div>
                     <div className="arrow arrow-second"></div>

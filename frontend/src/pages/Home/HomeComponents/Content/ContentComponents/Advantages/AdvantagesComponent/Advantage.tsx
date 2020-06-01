@@ -5,7 +5,7 @@ export default function Advantage(props:any){
     return(
         <div className="advantage-wrapper">
             <div className="advantage-icon">
-                {props.icon}
+                <img src={props.image}/>
             </div>
             <div className="advantage-title">
                 {props.title}

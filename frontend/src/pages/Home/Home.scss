@@ -20,13 +20,13 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: white;
-  outline: 1px solid slategrey;
+  background-color: $green;
+
 }
 .arrows-content{
   width: 200px !important;
   height: 100px !important;
-  margin-top: 85vh;
+  margin-top: 80vh;
   opacity: 1;
   transition: all 300ms;
   cursor: pointer;
@@ -36,8 +36,8 @@ body::-webkit-scrollbar-thumb {
 
     opacity: 0;
     position: absolute;
-        left: 50vw;
-        top: 97%;
+        left: 49vw;
+        top: 92%;
     transform-origin: 50% 50%;
     transform: translate3d(-50%, -10%, 0);
 }
@@ -58,7 +58,7 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
         top: 0%;
         left: 0;
-    width: 30px;
+    width: 40px;
 }
 
 .arrow:before {
@@ -75,7 +75,7 @@ body::-webkit-scrollbar-thumb {
 @keyframes arrow-movement {
     0% {
         opacity: 0;
-        top: 93%;
+        top: 86%;
     }
     70% {
         opacity: 1;
@@ -123,12 +123,13 @@ body::-webkit-scrollbar-thumb {
     width: 100vw;
   }
   .lines .line {
+    box-shadow: 0px 3px 0px rgba(112, 122, 122, 0.15);
     position: absolute;
-    width: 1px;
+    width: 10px;
     height: 150%;
     top: 0;
     left: 50%;
-    background: #2238433d;
+    background: #22384328;
     overflow: hidden;
   }
   .lines .line::after {
@@ -262,15 +263,3 @@ body::-webkit-scrollbar-thumb {
       top: 110%;
     }
   }
-
-
-
-
-
-
-
-
-
-// @media (max-width: 600px)
-//   .wrapper
-//     padding: 0 10%

@@ -2,25 +2,27 @@
 .advantage-wrapper{
     background-color: $light;
     border-radius: 0.3em;
-    height: 230px;
+    height: 250px;
     display: grid;
     box-shadow: $shadow;
     margin: 0 35px;
-    grid-template-rows: 110px 50px 100px;
+    width: 270px;
+    grid-template-rows: 170px 40px 40px;
 }
 
 .advantage-icon{
-    .MuiSvgIcon-root{
-        height: 3.7em;
-        width: 100%;
-    }
+    display: flex;
+    justify-content: center;
+
+    margin: 45px;
+    align-content: center;
 }
 
 .advantage-title{
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 1.5em;
-    color: $light;
+    color: $dark;
 }
 
 .advantage-subtitle{
